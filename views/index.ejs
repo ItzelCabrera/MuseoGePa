@@ -1,0 +1,26 @@
+<!-- Portfolio Grid-->
+<section class="page-section bg-light" id="portfolio">
+  <div class="container">
+    <div class="text-center">
+        <h2 class="section-heading text-uppercase">Muestras</h2>
+        <h3 class="section-subheading text-muted">El museo cuenta con una gran colección de minerales, rocas y fósiles. Estos son algunos especímenes que se encuentran dentro del recorrido:</h3>
+    </div>
+    <div class="row">
+      <!-- Portfolio item-->
+      <% data.forEach((member, index) => { %>
+        <div class="col-lg-4 col-sm-6">
+          <div class="portfolio-item">
+            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal">
+              <img class="img-fluid" src="<%= member.img%>" alt="..." />  
+            </a>
+            <div class="portfolio-caption">
+              <div class="portfolio-caption-heading"><%= member.name%></div>
+              <div class="portfolio-caption-subheading text-muted"><%= member.founded%></div>
+              <div class="portfolio-caption-below-subheading"><%= member.description %></div>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
